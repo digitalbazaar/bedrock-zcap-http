@@ -1,6 +1,6 @@
 # bedrock-zcap-storage-http ChangeLog
 
-## 0.1.0 - 2019-xx-xx
+## 1.0.0 - TBD
 
 ### Added
 - Added core files.
