@@ -35,7 +35,7 @@
     "bedrock-express": "^3.0.0",
     "bedrock-passport": "^5.0.0",
     "bedrock-permission": "^2.5.0",
-    "bedrock-mongodb": "^6.0.0  ",
+    "bedrock-mongodb": "^6.0.0",
     "bedrock-validation": "^4.1.0",
     "bedrock-zcap-storage": "^1.2.0"
   },
