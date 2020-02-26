@@ -21,7 +21,7 @@
     "bedrock-server": "^2.4.1",
     "bedrock-test": "^5.0.0",
     "bedrock-validation": "^4.2.0",
-    "bedrock-zcap-storage": "digitalbazaar/bedrock-zcap-storage",
+    "bedrock-zcap-storage": "^2.0.0",
     "bedrock-zcap-storage-http": "file:..",
     "sinon": "^8.1.1"
   }
