@@ -3,10 +3,10 @@
  */
 'use strict';
 
-const {config, util: {clone}} = require('bedrock');
-const brZcapStorage = require('bedrock-zcap-storage');
-const database = require('bedrock-mongodb');
-const mockData = require('./mock-data');
+// const {config, util: {clone}} = require('bedrock');
+// const brZcapStorage = require('bedrock-zcap-storage');
+// const database = require('bedrock-mongodb');
+// const mockData = require('./mock-data');
 
 describe('zcap API', () => {
   describe('insert API', () => {
