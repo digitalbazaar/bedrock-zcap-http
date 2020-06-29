@@ -7,13 +7,18 @@ const brPassport = require('bedrock-passport');
 const sinon = require('sinon');
 
 exports.stubPassport = ({actor}) => {
-  const passportStub = sinon.stub(brPassport, 'optionallyAuthenticated');
-  passportStub.callsFake((req, res, next) => {
+  const stubs = {
+    optionallyAuthenticated: sinon.stub(brPassport, 'optionallyAuthenticated'),
+    ensureAuthenticated: sinon.stub(brPassport, 'ensureAuthenticated')
+  };
+  const fakeAuth = (req, res, next) => {
     req.user = {
       account: {},
       actor,
     };
     next();
-  });
-  return passportStub;
+  };
+  stubs.optionallyAuthenticated.callsFake(fakeAuth);
+  stubs.ensureAuthenticated.callsFake(fakeAuth);
+  return stubs;
 };

@@ -3,8 +3,24 @@
  */
 'use strict';
 
+const {util: {clone}} = require('bedrock');
+
 const mocks = {};
 module.exports = mocks;
+
+const zcap = {
+  id: 'urn:zcap:076a866b-1a9b-49d9-989b-e86757ad7fd2',
+  allowedAction: ['test'],
+  controller: 'did:key:foo',
+  '@context': 'did:content:foo',
+  parentCapability: 'urn:zcap:bar',
+  invocationTarget: 'urn:test:055283db-2c39-466a-a1b8-b0c12007b25e',
+  referenceId: 'did:test:foo',
+  // TODO is this necessary?
+  invoker: 'did:key:bar'
+};
+
+mocks.zcap = () => clone(zcap);
 
 const actors = mocks.actors = {};
 
