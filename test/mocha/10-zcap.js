@@ -79,8 +79,38 @@ describe('capabilties API', function() {
     });
   });
   describe('delete API', function() {
-    it('should work', async function() {
-
+    it('should delete a zcap by id', async function() {
+      capability.controller = actor.id;
+      const id = `urn:zcap:${uuid()}`;
+      capability.id = id;
+      capability.referenceId = id;
+      const insertResult = await api.post(
+        '', {controller: actor.id, capability});
+      should.exist(insertResult);
+      insertResult.status.should.equal(204);
+      const deleteResult = await api.delete('', {controller: actor.id, id});
+      should.exist(deleteResult);
+      deleteResult.status.should.equal(204);
+      const getResult = await api.get('', {controller: actor.id, id});
+      should.exist(getResult);
+      getResult.status.should.equal(404);
+    });
+    it('should delete a zcap by referenceId', async function() {
+      capability.controller = actor.id;
+      const id = `urn:zcap:${uuid()}`;
+      const referenceId = 'test-delete-ref-id';
+      capability.id = id;
+      capability.referenceId = referenceId;
+      const insertResult = await api.post(
+        '', {controller: actor.id, capability});
+      should.exist(insertResult);
+      insertResult.status.should.equal(204);
+      const deleteResult = await api.delete(
+        '', {controller: actor.id, referenceId});
+      deleteResult.status.should.equal(204);
+      const getResult = await api.get('', {controller: actor.id, referenceId});
+      should.exist(getResult);
+      getResult.status.should.equal(404);
     });
   });
 });
