@@ -17,7 +17,11 @@ const zcap = {
   invocationTarget: 'urn:test:055283db-2c39-466a-a1b8-b0c12007b25e',
   referenceId: 'did:test:foo',
   // TODO is this necessary?
-  invoker: 'did:key:bar'
+  // removing the invoker causes a failure in
+  // bedrock-zcap-storage/lib/storage.js:245:10
+  // AssertionError [ERR_ASSERTION]: capability.invoker (string) is required
+  // this is with both controller and invoker set
+  invoker: 'did:key:invoker'
 };
 
 mocks.zcap = () => clone(zcap);
