@@ -32,18 +32,18 @@
     "assert-plus": "^1.0.0"
   },
   "peerDependencies": {
-    "bedrock": "^3.0.0",
-    "bedrock-account": "2.x - 3.x",
-    "bedrock-express": "^3.0.0",
+    "bedrock": "^3.1.1",
+    "bedrock-account": "3.x - 4.x",
+    "bedrock-express": "^3.2.0",
     "bedrock-passport": "5.x - 6.x",
     "bedrock-permission": "2.x - 3.x",
     "bedrock-mongodb": "6.x - 7.x",
-    "bedrock-validation": "^4.1.0",
+    "bedrock-validation": "^4.4.0",
     "bedrock-zcap-storage": "2.x - 3.x"
   },
   "devDependencies": {
-    "eslint": "^7.3.1",
-    "eslint-config-digitalbazaar": "^2.2.0"
+    "eslint": "^7.4.0",
+    "eslint-config-digitalbazaar": "^2.5.0"
   },
   "directories": {
     "lib": "./lib"
