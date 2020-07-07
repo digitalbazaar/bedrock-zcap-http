@@ -1,5 +1,10 @@
 # bedrock-zcap-storage-http ChangeLog
 
+## 1.2.0 - 2020-07-07
+
+### Changed
+- Update peer deps, test deps and CI workflow.
+
 ## 1.1.0 - 2020-06-30
 
 ### Changed
