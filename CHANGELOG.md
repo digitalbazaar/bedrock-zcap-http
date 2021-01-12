@@ -1,5 +1,10 @@
 # bedrock-zcap-storage-http ChangeLog
 
+## 1.3.0 - 2021-01-TBD
+
+### Changed
+- Update bedrock-account@5.0.
+
 ## 1.2.0 - 2020-07-07
 
 ### Changed
